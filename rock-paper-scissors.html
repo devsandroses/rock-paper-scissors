@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let choices = ["Rock", "Paper", "Scissors"];
+let random = Math.floor(Math.random()*3);
+let computerSelection = choices[random];
+let playerSelection = prompt("Rock, paper or scissors?");
+    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
+    alert("You chose: " + playerSelection+ '\n' + "The computer chose: " + 
+    computerSelection);
+    if (playerSelection === computerSelection) {
+        alert ("It's a tie!");
+    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+        alert("You lost! Paper beats rock.");
+    } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        alert("You lost! Scissors beat paper.");
+    } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+        alert("You lost! Rock beats scissors.");
+    } else if (playerSelection === "Scissors" && computerSelection=== "Paper") {
+        alert("You won! Scissors beat paper.");
+    } else if (playerSelection=== "Paper" && computerSelection === "Rock") {
+        alert("You won! Paper beats rock.");
+    } else if (playerSelection=== "Rock" && computerSelection === "Scissors") {
+        alert("You won! Rock beats scissors.");
+    }
+
+console.log(playerSelection)
+console.log(computerSelection)
+
+    
+
+  
+
+
+
+</script>
+
+</body>
+</html>
